@@ -1,0 +1,412 @@
+/* =========================================================
+   CAPSTONE PAGE
+   Uses the colour variables from style.css, so it follows
+   your palette and dark mode automatically.
+   ========================================================= */
+
+/* ---------- PAGE INTRO ---------- */
+.cap-intro { padding: 56px 0 32px; max-width: 760px; }
+.cap-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: 12px;
+}
+.cap-title {
+  font-size: clamp(2rem, 4.6vw, 3.2rem);
+  line-height: 1.12;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+.cap-title em {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
+.cap-lead { color: var(--muted); font-size: 1.02rem; max-width: 620px; }
+
+/* ---------- PROJECT CARD ---------- */
+.cap-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 32px;
+  margin-bottom: 28px;
+}
+.cap-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.cap-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+.cap-badge {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+/* Arrows + counter */
+.cap-controls { display: flex; align-items: center; gap: 10px; }
+.cap-count { font-size: 0.82rem; font-weight: 600; color: var(--muted); margin-right: 4px; }
+.cap-arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s, border-color 0.25s, transform 0.2s;
+}
+.cap-arrow svg { width: 18px; height: 18px; }
+.cap-arrow--solid { background: var(--btn-bg); border-color: var(--btn-bg); color: var(--btn-text); }
+.cap-arrow:hover { background: var(--btn-bg); border-color: var(--btn-bg); color: var(--btn-text); transform: translateY(-2px); }
+.cap-arrow:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* Slides */
+.cap-slide { display: none; }
+.cap-slide.is-active { display: block; animation: capFade 0.4s ease; }
+@keyframes capFade {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.cap-h2 { font-size: clamp(1.4rem, 2.6vw, 1.85rem); line-height: 1.25; font-weight: 700; margin-bottom: 10px; }
+.cap-text { color: var(--muted); font-size: 0.97rem; max-width: 720px; margin-bottom: 24px; }
+
+.cap-subhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.cap-subhead h3 { font-size: 1rem; font-weight: 700; }
+.cap-subhead span { font-size: 0.8rem; color: var(--muted); }
+
+/* Image grid + placeholders */
+.cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+.cap-grid figure, .cap-event figure { margin: 0; }
+.cap-ph {
+  aspect-ratio: 16 / 10;
+  border: 1.5px dashed var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 12px;
+}
+.cap-ph svg { width: 20px; height: 20px; }
+.cap-ph--tall { aspect-ratio: 4 / 3; }
+.cap-shot {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;          /* whole photo fits inside the box, no cropping */
+  background: var(--surface);   /* fills any empty space around it */
+  border-radius: 12px;
+  border: 1.5px solid var(--border);
+  cursor: zoom-in;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.cap-shot:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
+/* Contribution note */
+.cap-note {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.cap-note strong { color: var(--text); }
+
+/* Slides 2 & 3 */
+.cap-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.cap-step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+}
+.cap-step span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+  margin-bottom: 6px;
+}
+.cap-step p { font-size: 0.92rem; color: var(--muted); }
+.cap-skills { display: flex; flex-wrap: wrap; gap: 10px; }
+.cap-skills span {
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Dots */
+.cap-dots { display: flex; justify-content: center; gap: 6px; margin-top: 22px; }
+.cap-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  padding: 0;
+  transition: width 0.3s, background 0.3s;
+}
+.cap-dot.is-active { width: 22px; background: var(--accent-strong); }
+.cap-dot:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- NETWORKING EVENT ---------- */
+.cap-event {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 28px;
+  align-items: start;
+  margin-top: 6px;
+}
+.cap-event .cap-text { margin-bottom: 18px; }
+
+.cap-bda { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+.cap-bda div {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.cap-bda span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+:root[data-theme="dark"] .cap-bda span { color: var(--btn-text); }
+.cap-bda p { font-size: 0.85rem; line-height: 1.45; }
+
+.cap-quote {
+  background: var(--surface);
+  border-left: 4px solid var(--accent-strong);
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+.cap-quote p {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+.cap-quote cite { font-style: normal; font-size: 0.8rem; color: var(--muted); }
+.cap-quote cite a { color: var(--accent-strong); font-weight: 600; }
+
+.cap-keyskills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
+  padding-top: 18px;
+}
+.cap-keyskills span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+.cap-keyskills .cap-keyskills__label {
+  background: none;
+  border: none;
+  padding: 0 6px 0 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 980px) {
+  .cap-event { grid-template-columns: 1fr; }
+  .cap-event figure { max-width: 420px; }
+}
+
+@media (max-width: 760px) {
+  .cap-intro { padding: 36px 0 24px; }
+  .cap-card { padding: 20px 18px; }
+  .cap-card__top { align-items: flex-start; }
+  .cap-grid, .cap-steps, .cap-bda { grid-template-columns: 1fr; }
+}
+
+/* ---------- EVENT GALLERY ---------- */
+.cap-gallery__main { position: relative; }
+.cap-gallery .cap-shot { aspect-ratio: 4 / 3; }
+
+.cap-gallery__count {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.cap-gallery__prev,
+.cap-gallery__next {
+  position: absolute;
+  top: calc(50% - 19px);
+}
+.cap-gallery__prev { left: 10px; }
+.cap-gallery__next { right: 10px; }
+
+.cap-gallery__thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+.cap-gallery__thumbs img {
+  width: 64px;
+  height: 48px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  opacity: 0.55;
+  cursor: pointer;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+.cap-gallery__thumbs img:hover { opacity: 0.85; }
+.cap-gallery__thumbs img.is-active { opacity: 1; border-color: var(--text); }
+
+/* Only one photo? Hide the arrows, counter and thumbnails */
+.cap-gallery.is-single .cap-gallery__prev,
+.cap-gallery.is-single .cap-gallery__next,
+.cap-gallery.is-single .cap-gallery__count,
+.cap-gallery.is-single .cap-gallery__thumbs { display: none; }
+
+/* Clickable networking gallery photo */
+.cap-gallery__main img {
+  cursor: zoom-in;
+}
+
+/* Lightbox overlay */
+.image-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.image-lightbox.active {
+  display: flex;
+}
+
+.image-lightbox img {
+  max-width: 95%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* Keep enlarged photos within the screen */
+.image-lightbox img {
+  width: auto;
+  height: auto;
+  max-width: 95%;
+  max-height: 90vh;
+  object-fit: contain;
+  border: none;
+  box-shadow: none;
+  transform: none;
+}
+
+.lightbox-close:hover {
+  opacity: 0.7;
+}
+
+.lightbox-close:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+/* Small zoom button on gallery photo */
+.cap-gallery__zoom {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.cap-gallery__zoom:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}

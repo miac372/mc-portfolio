@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Mia</title>
+  <meta name="description" content="Professional e-portfolio of Mia, Bachelor of Commerce, Macquarie University.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+<!-- ================= NAVBAR (same on every page) ================= -->
+<header class="navbar">
+  <div class="container nav-inner">
+    <button class="menu-btn" aria-label="Open menu"><i data-lucide="menu"></i></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="capstone.html">Capstone</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="fit.html">Fit & Growth</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <!-- EDIT: your initials -->
+    <div class="nav-right">
+      <!-- EDIT: your LinkedIn URL and email -->
+      <a class="social-link" href="https://www.linkedin.com/in/mia-credaro-3108b836b/" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+      <a class="social-link" href="mailto:mcredaro3@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon" class="icon-moon"></i>
+        <i data-lucide="sun" class="icon-sun"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ================= HERO ================= -->
+
+
+<section class="home-hero">
+
+  <!-- Application badge -->
+  <div class="home-hero__badge">
+    <span class="home-hero__badge-icon">
+      <i data-lucide="briefcase-business"></i>
+    </span>
+    <span>Applying for: Graduate Business Associate - Financial Services at Morgan Consulting</span>
+  </div>
+
+  <div class="home-hero__layout">
+
+    <!-- LEFT SIDE -->
+    <div class="home-hero__content">
+
+      <h1 class="home-hero__title">
+        Hi, <span>I'm Mia</span>
+      </h1>
+
+      <h2 class="home-hero__subtitle">
+        <span id="rotating-role">a Creative Problem Solver</span>
+        <span class="typing-cursor">|</span>
+      </h2>
+
+      <div class="home-hero__actions">
+        <a class="home-hero__resume"
+           href="files/resume.pdf"
+           target="_blank"
+           rel="noopener noreferrer">
+          Resume <i data-lucide="external-link"></i>
+        </a>
+
+        <a class="home-hero__contact" href="contact.html">
+          Contact
+        </a>
+      </div>
+
+      <a class="home-hero__explore" href="#skills">
+        <i data-lucide="mouse"></i>
+        <span>Scroll to explore</span>
+      </a>
+
+    </div>
+
+    <!-- CENTRE: PORTRAIT -->
+    <div class="home-hero__visual">
+
+      <div class="home-hero__portrait">
+        <img src="Images/IMG_5010.png" alt="Portrait of Mia">
+      </div>
+
+      <!-- Decorative lines -->
+      <div class="home-hero__accent" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <aside class="home-hero__side">
+
+      <p class="home-hero__side-title">Connect with me</p>
+
+      <div class="home-hero__social-links">
+        <a href="https://www.linkedin.com/in/mia-credaro-3108b836b/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+
+        <a href="contact.html" aria-label="Contact">
+          <i data-lucide="mail"></i>
+        </a>
+
+        <a href="files/resume.pdf"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Resume">
+          <i data-lucide="file-text"></i>
+        </a>
+      </div>
+
+      <div class="home-hero__handwriting">
+        <svg class="home-hero__arrow" viewBox="0 0 100 55" fill="none" aria-hidden="true">
+          <path d="M3 20 Q45 -5 80 43 M65 39 L80 43 L78 27"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
+
+        <p>
+          Analytical<br>
+          Thinker<br>
+          Creative Problem Solver<br>
+          Curious Learner ♡
+        </p>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Pink flowing shapes -->
+  <div class="home-hero__wave home-hero__wave--left" aria-hidden="true"></div>
+  <div class="home-hero__wave home-hero__wave--right" aria-hidden="true"></div>
+
+</section>
+
+
+
+  <!-- ================= MY SKILLS (click a row to open it) ================= -->
+  <section class="section reveal" id="skills">
+    <div class="skills-head">
+      <div>
+        <div class="kicker"><span class="kicker-dots"><i></i><i></i></span>My Core Skills</div>
+        <h2>How I Turn Learning Into <span class="highlight">Impact</span></h2>
+        <p style="margin-top: 10px;">
+        <p> Through interdisciplinary projects, client collaboration and practical challenges, I've developed the skills to turn knowledge into meaningful business outcomes. Explore how these experiences have shaped my approach to working and learning.</p>
+      </div>
+      <a class="pill-btn" href="capstone.html">View my evidence <span><i data-lucide="arrow-right"></i></span></a>
+    </div>
+    <!-- EDIT: the text in [brackets] for each skill -->
+    <div class="skill-list">
+      <div class="skill-row open">
+        <button class="skill-head" aria-expanded="true">
+          <span class="skill-num">01</span>
+          <span class="skill-name">Motivation &amp; Self-Awareness</span>
+          <span class="skill-arrow"><i data-lucide="arrow-up-right"></i></span>
+        </button>
+        <div class="skill-body"><div>
+          <div class="skill-subtags"><span>Strengths</span><span>Reflection</span><span>Acting on feedback</span><span>Goal setting</span></div>
+          <p>I am motivated by solving practical problems and delivering meaningful outcomes. Through my Capstone experiences, I've recognised both my attention to detail and the need to balance quality with efficiency. This awareness has encouraged me to prioritise more effectively and seek feedback earlier.</p>
+          <a href="capstone.html?carousel=agility-challenge&slide=2"> See the evidence → </a>
+
+        </div></div>
+      </div>
+      <div class="skill-row">
+        <button class="skill-head" aria-expanded="false">
+          <span class="skill-num">02</span>
+          <span class="skill-name">Curiosity &amp; Lifelong Learning</span>
+          <span class="skill-arrow"><i data-lucide="arrow-up-right"></i></span>
+        </button>
+        <div class="skill-body"><div>
+        <div class="skill-subtags"><span>Industry guests</span><span>Networking</span><span>Asking questions</span><span>Excel course</span></div>         
+         <p>Working across business and technology has encouraged me to explore unfamiliar concepts and develop new skills.</p>
+          <a href="fit.html">See the evidence &rarr;</a>
+        </div></div>
+      </div>
+      <div class="skill-row">
+        <button class="skill-head" aria-expanded="false">
+          <span class="skill-num">03</span>
+          <span class="skill-name">Leadership &amp; Social Influence</span>
+          <span class="skill-arrow"><i data-lucide="arrow-up-right"></i></span>
+        </button>
+        <div class="skill-body"><div>
+          <div class="skill-subtags"><span>Team coordination</span><span>Decision making</span><span>Presenting</span></div>
+          <p>Contributing to interdisciplinary projects strengthened my ability to take ownership, communicate ideas and support shared objectives. I learned that leadership is not limited to formal roles, but can be demonstrated through initiative and accountability.</p>
+          <a href="capstone.html">See the evidence &rarr;</a>
+        </div></div>
+      </div>
+      <div class="skill-row">
+        <button class="skill-head" aria-expanded="false">
+          <span class="skill-num">04</span>
+          <span class="skill-name">Empathy &amp; Active Listening</span>
+          <span class="skill-arrow"><i data-lucide="arrow-up-right"></i></span>
+        </button>
+        <div class="skill-body"><div>
+          <div class="skill-subtags"><span>Stakeholder needs</span><span>Team support</span><span>Client focus</span></div>
+          <p>Analysing stakeholders and understanding client requirements helped me recognise the importance of considering different perspectives before proposing solutions.
+
+I learned to approach business problems by understanding stakeholder needs rather than making assumptions.</p>
+          <a href="capstone.html">See the evidence &rarr;</a>
+        </div></div>
+      </div>
+      <div class="skill-row">
+        <button class="skill-head" aria-expanded="false">
+          <span class="skill-num">05</span>
+          <span class="skill-name">Talent Management</span>
+          <span class="skill-arrow"><i data-lucide="arrow-up-right"></i></span>
+        </button>
+        <div class="skill-body"><div>
+          <div class="skill-subtags"><span>Delegation</span><span>Playing to strengths</span><span>Feedback</span></div>
+          <p>Working with teammates from different disciplines demonstrated the value of recognising individual strengths and allocating responsibilities accordingly.
+
+I learned that effective teamwork involves combining complementary capabilities to achieve a shared outcome.</p>
+          <a href="capstone.html">See the evidence &rarr;</a>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-next">
+    <span></span>
+    <a class="btn btn-small" href="about.html">About Me <i data-lucide="arrow-right"></i></a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <span>&copy; <span id="year"></span> Mia. All rights reserved.</span>
+    <span>Bachelor of Commerce &middot; Macquarie University</span>
+  </div>
+</footer>
+
+</body>
+</html>
+
