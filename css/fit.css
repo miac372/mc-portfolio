@@ -215,3 +215,236 @@
   .fg-quote blockquote { font-size: 1.1rem; }
   .fg-next { padding: 24px 22px; }
 }
+
+.fg-fit__item .fg-open {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-weight: 700;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fg-fit__item .fg-open:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* "See the evidence" button: no box */
+.fg-fit__item .fg-open {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-weight: 700;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Pop-up slideshow */
+.ev-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+.ev-modal.is-open { display: flex; }
+
+.ev-box {
+  position: relative;
+  width: min(900px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  padding: 20px;
+  border-radius: 14px;
+  background: #fff;
+  color: #222;
+}
+
+.ev-stage figure { margin: 0; }
+.ev-stage img {
+  display: block;
+  width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.ev-stage figcaption {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.ev-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 14px;
+}
+.ev-prev, .ev-next {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: #7a2533;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+.ev-count { font-size: 14px; opacity: 0.7; }
+
+.ev-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  color: #222;
+  cursor: pointer;
+}
+
+/* Pull "How I'm growing" closer to "Where I fit" */
+.fg-block[aria-labelledby="fg-grow-title"] { margin-top: -70px; }
+
+/* More space between the elements under it */
+.fg-grow   { margin-bottom: 58px; }
+.fg-quotes { margin-bottom: 42px; }
+.page-next { margin-top: 56px; }
+
+/* ===== Future plan: roadmap ===== */
+.fg-plan {
+  margin-top: 40px;
+  padding: 36px 32px 32px;
+  border-radius: 20px;
+  background: transparent;
+  border: 2px solid #f1c9ce;
+}
+.fg-plan__title {
+  margin: 6px 0 32px;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #7a2533;
+}
+.fg-plan__title em {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #bb6570;
+}
+
+.fg-road {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Dashed path joining the stops */
+.fg-road::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 16.66%;
+  right: 16.66%;
+  border-top: 2px dashed #c98b94;
+}
+
+.fg-road__stop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fg-road__dot {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #7a2533;
+  color: #fff;
+  box-shadow: 0 0 0 6px #fbeef0;
+  position: relative;
+  z-index: 1;
+}
+.fg-road__dot--light { background: #bb6570; }
+.fg-road__dot svg { width: 24px; height: 24px; }
+
+.fg-road__when {
+  margin: 12px 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #bb6570;
+}
+
+.fg-road__card {
+  flex: 1;
+  width: 100%;
+  padding: 20px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(122, 37, 51, 0.08);
+  transition: transform 0.2s;
+}
+.fg-road__card:hover { transform: translateY(-4px); }
+.fg-road__card h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: #7a2533;
+}
+.fg-road__card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6b4a50;
+}
+
+.fg-road__goal {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: 14px !important;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fbeef0;
+  font-size: 13px !important;
+  font-weight: 600;
+  color: #7a2533 !important;
+}
+.fg-road__goal svg { width: 16px; height: 16px; flex: none; margin-top: 2px; }
+
+/* Phones: vertical timeline */
+@media (max-width: 760px) {
+  .fg-plan { padding: 28px 18px; }
+  .fg-road { grid-template-columns: 1fr; gap: 28px; }
+  .fg-road::before {
+    top: 0;
+    bottom: 0;
+    left: 27px;
+    right: auto;
+    border-top: 0;
+    border-left: 2px dashed #c98b94;
+  }
+  .fg-road__stop { align-items: flex-start; padding-left: 76px; }
+  .fg-road__dot { position: absolute; left: 0; top: 0; }
+  .fg-road__when { margin-top: 16px; }
+}

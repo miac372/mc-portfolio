@@ -78,6 +78,10 @@
 }
 
 .home-hero__title span {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: #bb6570;
 }
 

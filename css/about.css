@@ -455,3 +455,10 @@
   .tk-where { width: 100%; text-align: left; padding-left: 21px; }
   .tk-tools { padding: 44px 18px; }
 }
+
+.tk-accent {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--accent-strong);
+}

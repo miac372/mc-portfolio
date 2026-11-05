@@ -48,7 +48,12 @@ body { position: relative; overflow-x: hidden; }
   line-height: 1.08;
   font-weight: 700;
 }
-.thanks__title span { color: var(--accent-strong); }
+.thanks__title span {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--accent-strong);
+}
 
 .thanks__text {
   max-width: 620px;
